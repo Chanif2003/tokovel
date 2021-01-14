@@ -1,1 +1,11 @@
-<h1>Ini adalah contoh sebagai halaman dashboard</h1>
+@extends('adminlte::page')
+
+@section('title', config('app.name').' - Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
+
+@section('content')
+    <p>Welcome to this beautiful admin panel AdminLTE3.</p>
+@stop

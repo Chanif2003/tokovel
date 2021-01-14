@@ -41,4 +41,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function transaksi()
+    {
+        return $this->belongsTo(User::class, 'id', 'user_id');
+    }
+
+    public function keranjang()
+    {
+        return $this->belongsTo('App\Models\Keranjang', 'user_id', 'id');
+    }
 }
